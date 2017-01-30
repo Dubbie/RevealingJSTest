@@ -1,0 +1,90 @@
+@charset "UTF-8";
+@import url("https://fonts.googleapis.com/css?family=Source+Sans+Pro:300,400,700");
+* {
+  box-sizing: border-box;
+}
+html, body, p, ol, ul, li, dl, dt, dd, blockquote, figure, fieldset, legend, textarea, pre, iframe, hr, h1, h2, h3, h4, h5, h6 {
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: "Source Sans Pro", "Helvetica", sans-serif;
+  background: black;
+  color: #fff;
+  height: 100vh;
+}
+ul {
+  list-style-type: none;
+}
+a {
+  text-decoration: none;
+}
+.main {
+  display: flex;
+  flex-grow: 1;
+  height: 90vh;
+}
+.nav {
+  height: 5vh;
+  background: linear-gradient(0deg, transparent, black);
+  display: flex;
+  align-items: center;
+  position: relative;
+  min-height: 3rem;
+}
+.nav-left, .nav-right {
+  display: flex;
+  align-items: stretch;
+  flex-basis: 0;
+  flex-grow: 1;
+  flex-shrink: 0;
+}
+.nav-left {
+  justify-content: flex-start;
+}
+.nav-right {
+  justify-content: flex-end;
+}
+.nav-item {
+  display: block;
+  padding: 0.5rem;
+}
+.nav-link {
+  position: relative;
+}
+.nav-link::after {
+  content: '';
+  display: block;
+  width: 0;
+  height:2px;
+  background-color: white;
+  position: absolute;
+  top: 100%;
+  left: 50%;
+  transform: translateX(-50%);
+  transition: all 200ms ease-in-out;
+}
+a.nav-item, .nav-item a {
+  color: rgba(255, 255, 255, 0.8);
+}
+.nav-link:hover:after, .nav-link.nav-active:after {
+  color: white;
+}
+a.nav-item:hover, a.nav-item.nav-active, .nav-item a:hover, .nav-item a.nav-active {
+  color: white;
+}
+.nav-link:hover::after, .nav-link.nav-active::after {
+  width: 100%;
+}
+footer {
+  height: 5vh;
+  background: linear-gradient(180deg, transparent, black);
+}
+#textbox {
+  width: 8rem;
+  height: 1.5rem;
+}
+#btn {
+  width: 3rem;
+  height: 1.5rem;
+}
